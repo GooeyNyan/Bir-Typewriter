@@ -18,9 +18,13 @@ Platen.propTypes = {
 const StyledPlaten = styled(Platen)`
   position: absolute;
   top: 100px;
-  left: 85px;
   width: 180px;
   height: 30px;
+  transform: translate3d(
+  ${props => 95 - ((props.message.split('\n').slice(-1)[0].length * 6.875))}px,
+  0,
+  0);
+  animation: transform 0.3s;
   background: #585755;
   &::before {
     position: absolute;

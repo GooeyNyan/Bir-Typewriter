@@ -2,7 +2,16 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Typewriter from './Typewriter';
 
+const App = () => (
+  <div className="App">
+    <Typewriter message={'HAPPY BIRTHDAY !\n'} />
+    <GlobalStyle />
+  </div>
+);
+
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise');
+
   body {
     display: flex;
     margin: 0;
@@ -12,9 +21,7 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
+    font-family: 'Waiting for the Sunrise', cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: #c7f9d4;
@@ -26,12 +33,5 @@ const GlobalStyle = createGlobalStyle`
       monospace;
   }
 `;
-
-const App = () => (
-  <div className="App">
-    <Typewriter />
-    <GlobalStyle />
-  </div>
-);
 
 export default App;
